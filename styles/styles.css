@@ -1,0 +1,29 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+body {
+	padding: 20px;
+}
+
+.data-cloak {
+	display: none;
+}
+
+/* SEARCH */
+
+.search .search-input {
+	width: 400px;
+	height: 40px;
+	padding: 0 5px;
+}
+
+.search table {
+	position: relative;
+	padding: 20px;
+	font-size: 1.2rem;
+}
+.search table th {
+	vertical-align: top !important;
+}

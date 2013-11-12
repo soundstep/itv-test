@@ -1,0 +1,30 @@
+<h1>Search</h1>
+<div>
+    <input class="search-input" autofocus placeholder="Search terms" type="text"/>
+</div>
+<div class="search-result data-cloak">
+    <h2>Number of item found: {{results.length}}</h2>
+    <table class="table table-condensed table-striped table-bordered data-cloak" data-show="{{results.length}}">
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Channel</th>
+            <th>Most Recent Episode</th>
+            <th>Synopsis</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr data-repeat="item in results">
+                <td><img data-src="{{item.Programme.ImageUri}}" width="145" height="88" alt="{{item.Programme.Programme.Title}}"/></td>
+                <td>
+                    <div data-hide="{{hasContentUrl(item)}}">{{item.Programme.Programme.Title}}</div>
+                    <div data-show="{{hasContentUrl(item)}}"><a data-href="{{item.Programme.AddtionalContentUri}}" target="_blank">{{item.Programme.Programme.Title}}</a></div>
+                </td>
+                <td>{{item.Programme.Channel.Name}}</td>
+                <td>{{formatDate(item.Programme.MostRecentEpisode)}}</td>
+                <td>{{item.Programme.ShortSynopsis}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
