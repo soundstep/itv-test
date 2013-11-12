@@ -1,7 +1,7 @@
-test
-========
+ITV Search Module
+=================
 
-### locations
+### Locations
 
 The search module is located in:
 
@@ -15,12 +15,12 @@ The demo is on the root of the repo:
 
 	/index.html
 	
-### installation
+### Installation
 
 	$ npm install
 	$ grunt install grunt-cli -g
 	
-### compile partials
+### Compile partials
 
 	$ grunt htmlConvert
 	
@@ -28,12 +28,21 @@ Compile on file change:
 
 	$ grunt watch
 
+### Run the demo
+
+The repo must be running on a local server: localhost on port 80 to avoid CORS issues.
+
+	/index.html
+	
 ### Run the tests
 
-Run the repo from a local browser and navigate to /tests
+The repo must be running on a local server: localhost on port 80 to avoid CORS issues.
+
+	/tests/index.html
 	
 ### Run the tests using karma
 
 	$ npm instal karma -g
 	$ npm install mocha -g
 	$ grunt karma
+
